@@ -20,12 +20,7 @@
 
     </div>
     <div class='content-wrapper'>
-        hello!!
-        this is a test
     
-
-
-      
       <div class="row" style="align-content: center;">
         <label for="year">Year: </label>
         <select id="year">
@@ -49,23 +44,24 @@
           <option value="Engineering">Engineering</option>
           <option value="Other">Other</option>
         </select>
-        <button onclick="seeMajors()">Submit</button>
+        <input type="button" class="button" value="Submit" onclick="seeMajors()">
       </div>
 
       <div class="row" id="scienceList">
         <label for="program">Program: </label>
         <select name="chosenProgram" id="program">
-          <option value="Choice" selected>Choose your program</option>
-          <option value="Anatomy & Cell Biology">Anatomy & Cell Biology</option>
-          <option value="Biochemistry">Biochemistry</option>
-          <option value="Biology">Biology</option>
-          <option value="Immunology (Inter-departmental Honours)">Immunology (Inter-departmental Honours)</option>
-          <option value="Microbiology and Immunology">Microbiology and Immunology</option>
-          <option value="Pharmacology & Therapeutics">Pharmacology & Therapeutics</option>
-          <option value="Physiology">Physiology</option>
-          <option value="Psychology">Psychology</option>
+          <option value="choice" selected>Choose your program</option>
+          <option value="https://www.mcgill.ca/anatomy/undergraduate/programs/major">Anatomy & Cell Biology</option>
+          <option value="https://www.mcgill.ca/biochemistry/undergraduate-studies/programs/major">Biochemistry</option>
+          <option value="https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/bachelor-science-bsc-major-biology">Biology</option>
+          <option value="https://www.mcgill.ca/microimm/undergraduate-studies/programs/interdepartmental">Immunology (Inter-departmental Honours)</option>
+          <option value="https://www.mcgill.ca/microimm/undergraduate-studies/programs/major">Microbiology and Immunology</option>
+          <option value="https://www.mcgill.ca/pharma/undergraduate/programs/major">Pharmacology & Therapeutics</option>
+          <option value="https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/bachelor-science-bsc-major-physiology">Physiology</option>
+          <option value="https://www.mcgill.ca/psychology/undergraduate/programs-study/bachelor-science-bsc/major-psychology">Psychology</option>
+          <option value="https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/bachelor-science-bsc-major-neuroscience">Neuroscience</option>
         </select>
-        <button onclick="majorList()">Submit</button>
+        <input type="button" class="button" value="Submit" onclick="majorList()">
       </div>
     </div>
     <script>
@@ -77,6 +73,9 @@
               var x = document.getElementById("scienceList");
               x.style.display = "none";
             }
+        }
+        function majorList() {
+
         }
     </script>
 </body>
