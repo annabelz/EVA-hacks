@@ -84,7 +84,27 @@ if __name__ == "__main__":
 
     #End goal: CSV file with following columns:
     #Course, Prerequisites, Term, # of credit hours
+
+    #limit analyses of prereqs/coreqs to only required major courses
+    all_prerequisites_pruned = []
+    for prerequisite_list in all_prerequisites:
+        new_prerequisite_list = []
+        for course_code in all_course_codes:
+            if course_code in prerequisite_list:
+                new_prerequisite_list.append(course_code)
+        
+        all_prerequisites_pruned.append(', '.join(np.unique(list(np.array(new_prerequisite_list).flatten()))))
+
+    all_corequisites_pruned = []
+    for corequisite_list in all_corequisites:
+        new_corequisite_list = []
+        for course_code in all_course_codes:
+            if course_code in corequisite_list:
+                new_corequisite_list.append(course_code)
+        
+        all_corequisites_pruned.append(', '.join(np.unique(list(np.array(new_corequisite_list).flatten()))))
+
+
     output_df = pd.DataFrame({'Course Code':all_course_codes, 'Course Name':all_course_names, 'Num Credit Hours':all_credit_hours,
-                            'Terms Offered':all_terms, 'Prerequisites':all_prerequisites, 'Corequisites':all_corequisites})
+                            'Terms Offered':all_terms, 'Prerequisites':all_prerequisites_pruned, 'Corequisites':all_corequisites_pruned})
     output_df.to_csv("major_plan.csv",index=False)
-    print(output_df)
