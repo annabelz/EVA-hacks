@@ -7,6 +7,11 @@
     <meta name="description" content="A tool to help current or prospective mcgill students plan their degree and classes">
     <meta name="keywords" content="mcgill, classes, mcgill classes, mcgill help, degree, classes, information, ">
     <meta name="robots" content="all">
+    <style>
+      #scienceList {
+        display: none;
+      }
+    </style>
 </head>
 <body id="home">
     <div class="content-wrapper" style="background-color: rgb(197, 95, 95); align-content: center;">
@@ -22,7 +27,7 @@
 
       
       <div class="row" style="align-content: center;">
-        <label for="year">year: </label>
+        <label for="year">Year: </label>
         <select id="year">
           <option value="U0">U0</option>
           <option value="U1">U1</option>
@@ -33,19 +38,47 @@
         </select>
       </div>
       
-      <div class="row" >
-        <label for="fatulty">faculty: </label>
-        <select id="faculty">
+      <div class="row">
+        <label for="faculty">Faculty: </label>
+        <select name = "chosenFaculty" id="faculty">
+          <option value="Choice" selected>Choose your faculty</option>
           <option value="Arts">Arts</option>
-          <option value="Science">flex-start</option>
+          <option value="Science">Science</option>
           <option value="ArtSci">ArtSci</option>
-          <option value="Education" selected>Education</option>
+          <option value="Education">Education</option>
           <option value="Engineering">Engineering</option>
           <option value="Other">Other</option>
-      
         </select>
+        <button onclick="seeMajors()">Submit</button>
+      </div>
+
+      <div class="row" id="scienceList">
+        <label for="program">Program: </label>
+        <select name="chosenProgram" id="program">
+          <option value="Choice" selected>Choose your program</option>
+          <option value="Anatomy & Cell Biology">Anatomy & Cell Biology</option>
+          <option value="Biochemistry">Biochemistry</option>
+          <option value="Biology">Biology</option>
+          <option value="Immunology (Inter-departmental Honours)">Immunology (Inter-departmental Honours)</option>
+          <option value="Microbiology and Immunology">Microbiology and Immunology</option>
+          <option value="Pharmacology & Therapeutics">Pharmacology & Therapeutics</option>
+          <option value="Physiology">Physiology</option>
+          <option value="Psychology">Psychology</option>
+        </select>
+        <button onclick="majorList()">Submit</button>
       </div>
     </div>
+    <script>
+        function seeMajors() {
+            if (document.getElementById("faculty").value === "Science") {
+              var x = document.getElementById("scienceList");
+              x.style.display = "block";
+            } else {
+              var x = document.getElementById("scienceList");
+              x.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 
