@@ -1,0 +1,12 @@
+Course Code,Course Name,Num Credit Hours,Terms Offered,Prerequisites,Corequisites
+COMP 202,Foundations of Programming ,3,"Fall 2021, Winter 2022    ",,
+COMP 206,Introduction to Software Systems ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 250",
+COMP 250,Introduction to Computer Science ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 250",
+COMP 251,Algorithms and Data Structures ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 250","MATH 235, MATH 240"
+COMP 273,Introduction to Computer Systems ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 250","COMP 206, MATH 235, MATH 240"
+COMP 302,Programming Languages and Paradigms ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 230, COMP 250, MATH 235, MATH 240, MATH 318, PHIL 210","COMP 206, MATH 235, MATH 240"
+COMP 303,Software Design ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 206, COMP 230, COMP 250, MATH 235, MATH 240, MATH 318, PHIL 210","COMP 206, MATH 235, MATH 240"
+COMP 310,Operating Systems ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 206, COMP 230, COMP 250, COMP 273, MATH 235, MATH 240, MATH 318, PHIL 210","COMP 206, MATH 235, MATH 240"
+MATH 222,Calculus 3 ,3,"Fall 2021, Winter 2022, Summer 2022    ","COMP 202, COMP 206, COMP 230, COMP 250, COMP 273, MATH 133, MATH 141, MATH 235, MATH 240, MATH 318, PHIL 210","COMP 206, MATH 133, MATH 141, MATH 235, MATH 240"
+MATH 223,Linear Algebra ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 206, COMP 230, COMP 250, COMP 273, MATH 133, MATH 141, MATH 235, MATH 240, MATH 318, PHIL 210","COMP 206, MATH 133, MATH 141, MATH 235, MATH 240"
+MATH 240,Discrete Structures ,3,"Fall 2021, Winter 2022    ","COMP 202, COMP 206, COMP 230, COMP 250, COMP 273, MATH 133, MATH 141, MATH 235, MATH 240, MATH 318, PHIL 210","COMP 206, MATH 133, MATH 141, MATH 235, MATH 240"
