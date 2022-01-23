@@ -76,7 +76,7 @@ def index():
 
 
 def get_info(user_link): 
-    user_link = input("Enter a link to the ECalendar for Your Major:")
+    
     if user_link[:79] != 'https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/':
         raise NameError()
 
