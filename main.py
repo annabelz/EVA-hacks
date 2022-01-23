@@ -29,7 +29,9 @@ def addCourse(course, term, not_taken_courses, num_credits_remaining, output_df)
             if coreq == '':
                 course.taken=True
                 return True
-            elif num_credits_remaining >= int(output_df[output_df['Course Code']==course.code]['Num Credit Hours'].values[0])+int(output_df[output_df['Course Code']==coreq]['Num Credit Hours'].values[0]):
+            elif (len(output_df[output_df['Course Code']==course.code]['Num Credit Hours'].values)>0 and
+                  len(output_df[output_df['Course Code']==coreq]['Num Credit Hours'].values)>0 and
+                  num_credits_remaining >= int(output_df[output_df['Course Code']==course.code]['Num Credit Hours'].values[0])+int(output_df[output_df['Course Code']==coreq]['Num Credit Hours'].values[0])):
                 course.taken=True
                 return True
             else:
