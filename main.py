@@ -51,8 +51,8 @@ class Course:
     taken=False
     
     def __init__(self,code,ch,terms,prereq,coreq):
-        self.code = code;
-        self.ch = ch;
+        self.code = code
+        self.ch = ch
         self.terms = terms
         self.prereq = prereq
         self.coreq = coreq
