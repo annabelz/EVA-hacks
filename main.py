@@ -63,15 +63,15 @@ app = Flask(__name__)
 def index():
     
     user_link = request.args.get("Enter a link to the ECalendar for Your Major:", "")
-    info = "doesnt go thru"
+    info = ""
+    if 'user_link' in request.args.keys():
+        if request.args['user_link'] != "": 
+            if request.args['user_link'][:79] != 'https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/':
+                info = ""
+                raise NameError()
+            info = get_info(request.args['user_link'])
 
-    if request.args['user_link'] != "": 
-        if request.args['user_link'][:79] != 'https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/':
-            info = ""
-            raise NameError()
-        info = get_info(request.args['user_link'])
-           
-            
+
     return (render_template("mcdegreeplanning.html") + "<p>" + info + "</p>")
 
 
