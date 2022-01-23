@@ -6,9 +6,27 @@ from bs4 import SoupStrainer
 from itertools import chain
 import re
 import pandas as pd
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    
+    user_link = request.args.get("Enter a link to the ECalendar for Your Major:", "")
+    info = "doesnt go thru"
+
+    if request.args['user_link'] != "": 
+        if request.args['user_link'][:79] != 'https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/':
+            info = ""
+            raise NameError()
+        info = get_info(request.args['user_link'])
+           
+            
+    return (render_template("mcdegreeplanning.html") + "<p>" + info + "</p>")
 
 
-if __name__ == "__main__":
+def get_info(user_link): 
     user_link = input("Enter a link to the ECalendar for Your Major:")
     if user_link[:79] != 'https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/':
         raise NameError()
@@ -108,3 +126,7 @@ if __name__ == "__main__":
     output_df = pd.DataFrame({'Course Code':all_course_codes, 'Course Name':all_course_names, 'Num Credit Hours':all_credit_hours,
                             'Terms Offered':all_terms, 'Prerequisites':all_prerequisites_pruned, 'Corequisites':all_corequisites_pruned})
     output_df.to_csv("major_plan.csv",index=False)
+    return (output_df.to_html())
+
+if __name__ == "__main__":
+    app.run(host="127.0.0.1", port=8080, debug=True)
