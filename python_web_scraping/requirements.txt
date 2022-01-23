@@ -54,3 +54,4 @@ typing_extensions==4.0.1
 umap==0.1.1
 urllib3==1.26.4
 wcwidth==0.2.5
+Flask==2.0.1
