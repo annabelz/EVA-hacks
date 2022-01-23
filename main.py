@@ -74,7 +74,7 @@ def index():
             info = get_info(request.args['user_link'])
 
 
-    return (render_template("mcdegreeplanning.html") + "<p>" + info + "</p>")
+    return (render_template("mcdegreeplanning.html") + "<p>" + info[0] + info[1] + "</p>")
 
 
 def get_info(user_link): 
