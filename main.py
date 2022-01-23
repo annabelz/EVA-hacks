@@ -64,7 +64,7 @@ app = Flask(__name__)
 
 def index():
     
-    user_link = request.args.get("Enter a link to the ECalendar for Your Major:", "")
+   
     info = ""
     if 'user_link' in request.args.keys():
         if request.args['user_link'] != "": 
