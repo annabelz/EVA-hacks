@@ -20,72 +20,15 @@
 
     </div>
     <div class='content-wrapper' style="padding-top: 20px; padding-bottom: 20px;">
-    
-      <!-- <div class="row" style="align-content: center;">
-        <label for="year">Year: </label>
-        <select id="year">
-          <option value="U0">U0</option>
-          <option value="U1">U1</option>
-          <option value="U2">U2</option>
-          <option value="U3">U3</option>
-          <option value="U4+">U4+</option>
-          
-        </select>
+      <div class="content-wrapper" style="background-color: rgb(197, 95, 95); align-content: center; padding: 5px;">
+        <p>Prepare for your years at McGill by creating a full plan of your degree!</p>
       </div>
-      
-      <div class="row">
-        <label for="faculty">Faculty: </label>
-        <select name = "chosenFaculty" id="faculty">
-          <option value="Choice" selected>Choose your faculty</option>
-          <option value="Arts">Arts</option>
-          <option value="Science">Science</option>
-          <option value="ArtSci">ArtSci</option>
-          <option value="Education">Education</option>
-          <option value="Engineering">Engineering</option>
-          <option value="Other">Other</option>
-        </select>
-        <input type="button" class="button" value="Submit" onclick="seeMajors()">
+      <div class="content-wrapper" style="background-color: rgb(197, 95, 95); align-content: center; padding: 5px;">
+        <form action="" method="get">
+          Insert the eCalendar link to program: <input type="text" name="user_link">
+          <input type="submit" name="submit_button" value="Submit">
+        </form>
       </div>
-
-      <div class="row" id="scienceList">
-        <label for="program">Program: </label>
-        <select name="chosenProgram" id="program">
-          <option value="choice" selected>Choose your program</option>
-          <option value="https://www.mcgill.ca/anatomy/undergraduate/programs/major">Anatomy & Cell Biology</option>
-          <option value="https://www.mcgill.ca/biochemistry/undergraduate-studies/programs/major">Biochemistry</option>
-          <option value="https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/bachelor-science-bsc-major-biology">Biology</option>
-          <option value="https://www.mcgill.ca/microimm/undergraduate-studies/programs/interdepartmental">Immunology (Inter-departmental Honours)</option>
-          <option value="https://www.mcgill.ca/microimm/undergraduate-studies/programs/major">Microbiology and Immunology</option>
-          <option value="https://www.mcgill.ca/pharma/undergraduate/programs/major">Pharmacology & Therapeutics</option>
-          <option value="https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/bachelor-science-bsc-major-physiology">Physiology</option>
-          <option value="https://www.mcgill.ca/psychology/undergraduate/programs-study/bachelor-science-bsc/major-psychology">Psychology</option>
-          <option value="https://www.mcgill.ca/study/2021-2022/faculties/science/undergraduate/programs/bachelor-science-bsc-major-neuroscience">Neuroscience</option>
-        </select>
-        <input type="button" class="button" value="Submit" onclick="majorList()">
-      </div>
-    </div>
-    <script>
-        function seeMajors() {
-            if (document.getElementById("faculty").value === "Science") {
-              var x = document.getElementById("scienceList");
-              x.style.display = "block";
-            } else {
-              var x = document.getElementById("scienceList");
-              x.style.display = "none";
-            }
-        }
-        function majorList() {
-
-        }
-    </script> -->
-    <div class="content-wrapper" style="background-color: rgb(197, 95, 95); align-content: center; padding: 5px;">
-      <p>Prepare for your years at McGill by creating a full plan of your degree!</p>
-    </div>
-    <div class="content-wrapper" style="background-color: rgb(197, 95, 95); align-content: center; padding: 5px;">
-      <form action="" method="get">
-        Insert the eCalendar link to program: <input type="text" name="user_link">
-        <input type="submit" name="submit_button" value="Submit">
-      </form>
     </div>
 </body>
 
